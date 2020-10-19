@@ -1,0 +1,17 @@
+spring:
+  kafka:
+    consumer:
+      group-id: activity-service
+      auto-offset-reset: earliest
+    bootstrap-servers: localhost:9092
+
+testers-service:
+  topic-name: testers-service-activity
+  messages-per-request: 1
+
+zookeeper:
+  host: localhost:2181
+  groupId: activity-service
+
+server:
+  port: 32502
