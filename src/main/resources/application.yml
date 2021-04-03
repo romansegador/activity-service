@@ -3,7 +3,7 @@ spring:
     consumer:
       group-id: activity-service
       auto-offset-reset: earliest
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: broker:29092,localhost:9092
 
 testers-service:
   topic-name: testers-service-activity
