@@ -64,7 +64,7 @@ public class TestersServiceListenerPactTest {
     @Test
     @SneakyThrows
     @PactTestFor(pactMethod = "validateTestersServiceListener")
-    public void testExample(List<Message> messages) {
+    public void validTestersServiceMessageIsConsumed(List<Message> messages) {
         messages.forEach(message -> sendMessage(message.uniqueKey(), message.contentsAsString()));
 
         // Verify that the expected message is consumed by our listener
